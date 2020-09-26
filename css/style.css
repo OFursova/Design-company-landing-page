@@ -1,0 +1,333 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.container{
+    width: 98vw;
+    min-width: 420px;
+    max-width: 1200px;
+    min-height: 100vh;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+.container header{
+    width: 100%;
+    min-height: 60vh;
+    max-height: 90vh;
+    padding: 0 1vw;
+    background-image: url(../img/second.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container nav{
+    width: 100%;
+    height: 3em;
+    position: sticky;
+    top: 0;
+    background-color: rgba(31, 50, 44, 0.8);
+    color: #30CAE2;
+}
+
+.container nav ul{
+    width: 100%;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container nav ul li{
+    width: fit-content;
+    list-style: none;
+    padding: 1em;
+}
+
+.container nav ul li:hover{
+    text-shadow: 0 0 5px white;
+}
+
+.container nav ul li:nth-child(4){
+    width: fit-content;
+    height: fit-content;
+    padding: 1.2em 2em;
+    background-color: #30CAE2 !important;
+    color: white;
+}
+
+.container nav ul li:nth-child(4)>h3{
+    font-size: 1.8vmin;
+    font-weight: normal;
+    text-align: center;
+}
+
+.container nav ul li:nth-child(4)>h3:last-child{
+    font-weight: bold;
+    padding: 0;
+}
+
+.container nav ul li a{
+    text-decoration: none;
+    font-size: 1.8vmin;
+    font-weight: 600;
+    color: white;
+}
+
+.container .landing{
+    width: 60%;
+    height: 10vmin;
+    margin-top: 10vh;
+    margin-bottom: 50vw;
+}
+
+.container .landing h1{
+    padding: 0.3em 0.5em;
+    font-size: 3vmin;
+    background-color: white;
+    color: rgb(31, 50, 44);
+}
+
+.container .landing p{
+    padding: 0.3em 0.5em;
+    margin: 0 1vw;
+    font-size: 2vmin;
+    background-color: rgba(31, 50, 44, 0.8);
+    color: white;
+}
+
+.container main{
+    width: 100%;
+    background-image: url(../img/third.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.container main .blocks{
+    width: 100%;
+    min-height: 20vh;
+    height: auto;
+    padding: 5vh 0;
+    display: grid;
+    grid-template-rows: 1fr 1fr minmax(10vh, 6fr);
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas:   "header header header header"
+                            "subheader subheader subheader subheader"
+                            "item1 item2 item3 item4";
+    color: rgb(31, 50, 44);
+    background-color: white;
+}
+
+.container main .blocks>h2{
+    grid-area: header;
+    text-align: center;
+    padding: 1vh 0;
+    font-size: 4vmin;
+}
+
+.container main .blocks>p{
+    grid-area: subheader;
+    text-align: center;
+    font-size: 2vmin;
+}
+
+#item1{
+    grid-area: item1;
+}
+#item2{
+    grid-area: item2;
+}
+#item3{
+    grid-area: item3;
+}
+#item4{
+    grid-area: item4;
+}
+
+.container main .blocks>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.container main .blocks>div>.round{
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background-color: #30CAE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container main .blocks>div>.round>img{
+    width: 5vw;
+    height: 5vw;
+}
+
+.container main .blocks>div>h3{
+    padding: 1em;
+}
+
+.container main .blocks>div>p{
+    font-size: 2vmin;
+    padding: 1em;
+    text-align: center;
+}
+
+.container main .dark{
+    width: 100%;
+    height: 35vh;
+    padding: 5% 15%;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.container main .dark>h2{
+    padding: 1vh 0;
+    font-size: 4vmin;
+}
+
+.container main .dark>p{
+    font-size: 2vmin;
+}
+
+.container main .dark>button{
+    width: 40%;
+    height: 3em;
+    margin-top: 2vh;
+    background-color: #30CAE2;
+    border-radius: 10px;
+    border: none;
+}
+
+.container main .dark>button>a{
+   text-decoration: none;
+   color: black;
+   font-weight: 600;
+   padding: 1em;
+}
+
+.container main .dark>button:hover{
+    box-shadow: 0 0 15px aliceblue;
+}
+
+.container main .blocks .options>img{
+    width: 96%;
+    padding: 0 2%;
+}
+
+.container main .dark:last-child{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.container main .dark .wrapper{
+    width: 10vw;
+    height: 4vw;
+    margin: 1vw auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container main .dark .wrapper span{
+    width: 1.5vw;
+    height: 1.5vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.container main .dark .wrapper span:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+footer{
+    width: 100%;
+    height: 5vh;
+    padding: 1vmin;
+    background-color: #30CAE2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vmin;
+}
+
+@media screen and (max-width:600px){
+    .container nav ul li{
+        display: none;
+    }
+
+    .container nav ul{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .container nav:hover ul li{
+        display: block;
+        margin: 0 !important;
+        transition: all 2s linear;
+        background-color: rgba(48, 202, 226, 0.788);
+        width: 25vmax;
+        text-align: center;
+    }
+
+    .container nav ul li a:hover{
+        color: navy;
+    }
+
+    .container nav ul li:nth-child(4){
+        display: block;
+        width: 25vmax;
+        height: 10vh;
+        margin: 0 auto;
+    }
+
+    .container nav ul li:nth-child(4)>h3{
+        font-size: 1rem;
+    }
+
+    .container .landing{
+        height: auto;
+        word-wrap: break-word;
+    }
+
+    .container .landing h1{
+        font-size: 1rem;
+    }
+    
+    .container .landing p{
+        font-size: 0.7rem;
+    }
+
+    .container main .blocks{
+        grid-template-rows: 1fr 1fr minmax(10vh, 6fr) minmax(10vh, 6fr);
+        grid-template-columns: repeat(2, 50%);
+        grid-template-areas:   "header header"
+                                "subheader subheader"
+                                "item1 item2"
+                                "item3 item4";
+    }
+
+    .container main .dark{
+        height: 25vh;
+    }
+}
+
+
+
